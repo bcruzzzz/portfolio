@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Robert Cruz | BSIT Student Portfolio</title>
+  <meta name="description" content="Portfolio of John Robert Cruz, a BSIT student at Bulacan State University building web apps with React and Firebase.">
+  <meta name="theme-color" content="#e4572e">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    try {
+      var saved = localStorage.getItem("theme");
+      if (!saved) {
+        saved = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", saved);
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+    document.documentElement.classList.add("js");
+  </script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <div class="progress" id="progress"></div>
+  <div class="glow" id="glow"></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="#home">John Robert<span class="accent">.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-tools">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+          <span class="theme-icon" aria-hidden="true"></span>
+        </button>
+        <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-text">
+        <p class="eyebrow">Student portfolio</p>
+        <h1>Hi, I'm <span class="accent">John Robert Cruz</span>.</h1>
+        <p class="typed-line">I'm a <span class="typed" id="typed"></span><span class="caret"></span></p>
+        <p class="lead">
+          A 3rd Year BS Information Technology student at Bulacan State University,
+          building web apps with React and Firebase.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#projects">View my work</a>
+          <a class="btn" href="#contact">Contact me</a>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="avatar">JR</div>
+        <span class="float-chip c1">React</span>
+        <span class="float-chip c2">Firebase</span>
+        <span class="float-chip c3">JavaScript</span>
+      </div>
+    </section>
+
+    <section class="container section reveal" id="about">
+      <p class="section-no">01 / Introduction</p>
+      <h2>Learning today, building tomorrow.</h2>
+      <div class="about-grid">
+        <div>
+          <p class="story">
+            Hi! I'm John Robert, a 3rd Year Bachelor of Science in Information Technology
+            student at Bulacan State University with an interest in web development.
+          </p>
+          <p class="story">
+            My academic journey has let me explore programming languages, frameworks and tools
+            through hands-on projects. I work with HTML, CSS and JavaScript, and I'm
+            continuously learning React and Firebase to improve my development skills.
+          </p>
+          <p class="story">
+            I believe every project is a chance to learn something new, sharpen my
+            problem-solving, and turn an idea into a useful application.
+          </p>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-num" data-count="4">0</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="8">0</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="3" data-suffix="rd">0</span>
+            <span class="stat-label">Year level</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section reveal" id="skills">
+      <p class="section-no">02 / Technical skills</p>
+      <h2>Technologies I explore.</h2>
+
+      <div class="filters" id="skillFilters">
+        <button type="button" class="filter active" data-filter="all">All</button>
+        <button type="button" class="filter" data-filter="frontend">Frontend</button>
+        <button type="button" class="filter" data-filter="cloud">Backend &amp; Cloud</button>
+        <button type="button" class="filter" data-filter="tools">Tools</button>
+      </div>
+
+      <div class="skill-grid" id="skillGrid">
+        <button type="button" class="skill" data-cat="frontend" data-note="Page structure and semantic markup for every project.">HTML5</button>
+        <button type="button" class="skill" data-cat="frontend" data-note="Layouts, animations, dark mode and responsive design.">CSS3</button>
+        <button type="button" class="skill" data-cat="frontend" data-note="Interactivity, form validation and working with async data.">JavaScript</button>
+        <button type="button" class="skill" data-cat="frontend" data-note="Components, hooks and routing in the Pokédex and AutoRent apps.">React JS</button>
+        <button type="button" class="skill" data-cat="cloud" data-note="Authentication, Realtime Database, Firestore and Hosting.">Firebase</button>
+        <button type="button" class="skill" data-cat="tools" data-note="Version control, branches and publishing to GitHub.">Git &amp; GitHub</button>
+        <button type="button" class="skill" data-cat="tools" data-note="Designing screens and layouts before building them.">Figma</button>
+        <button type="button" class="skill" data-cat="tools" data-note="Fast dev server and production builds for React apps.">Vite</button>
+      </div>
+
+      <p class="skill-note" id="skillNote">Hover or tap a skill to see how I use it.</p>
+    </section>
+
+    <section class="container section reveal" id="projects">
+      <p class="section-no">03 / My work</p>
+      <h2>Academic projects.</h2>
+      <p class="story">Selected school projects that represent my learning experiences and development journey. Click a card for details.</p>
+
+      <div class="filters" id="projectFilters">
+        <button type="button" class="filter active" data-filter="all">All</button>
+        <button type="button" class="filter" data-filter="react">React</button>
+        <button type="button" class="filter" data-filter="firebase">Firebase</button>
+        <button type="button" class="filter" data-filter="web">Web</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid"></div>
+    </section>
+
+    <section class="container section reveal" id="education">
+      <p class="section-no">04 / Education</p>
+      <h2>My education.</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-year">2011 - 2017</span>
+          <h3>Elementary</h3>
+          <p>Mary and Jesus School Inc.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2017 - 2021</span>
+          <h3>Junior High School</h3>
+          <p>Mary and Jesus School Inc.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2021 - 2023</span>
+          <h3>Senior High School</h3>
+          <p>Mary and Jesus School Inc., STEM</p>
+        </div>
+        <div class="timeline-item current">
+          <span class="timeline-year">2023 - Present</span>
+          <h3>Bachelor of Science in Information Technology</h3>
+          <p>Bulacan State University, currently pursuing my degree.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section reveal" id="contact">
+      <p class="section-no">05 / Contact</p>
+      <h2>Let's connect.</h2>
+      <p class="story">Have a question or want to work together? Reach out anytime.</p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <span class="card-label">Email</span>
+          <a class="contact-link" data-contact="email" href="mailto:robertcruzc02@gmail.com">robertcruzc02@gmail.com</a>
+          <button type="button" class="copy-btn" data-copy="email">Copy</button>
+        </div>
+
+        <div class="contact-card">
+          <span class="card-label">Phone</span>
+          <a class="contact-link" data-contact="phone" href="tel:+630000000000">0915 273 3489</a>
+          <button type="button" class="copy-btn" data-copy="phone">Copy</button>
+        </div>
+
+        <div class="contact-card">
+          <span class="card-label">Facebook</span>
+          <a class="contact-link" data-contact="facebook" href="https://www.facebook.com/mousy.int/" target="_blank" rel="noopener">Open Facebook &nearr;</a>
+        </div>
+
+        <div class="contact-card">
+          <span class="card-label">GitHub</span>
+          <a class="contact-link" data-contact="github" href="https://github.com/bcruzzzz" target="_blank" rel="noopener">github.com/bcruzzzz &nearr;</a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <h3>Send me a message</h3>
+        <div class="form-row">
+          <label class="form-field">
+            <span>Your name</span>
+            <input type="text" id="cfName" autocomplete="name">
+            <small class="field-error" id="cfNameError"></small>
+          </label>
+          <label class="form-field">
+            <span>Your email</span>
+            <input type="email" id="cfEmail" autocomplete="email">
+            <small class="field-error" id="cfEmailError"></small>
+          </label>
+        </div>
+        <label class="form-field">
+          <span>Message</span>
+          <textarea id="cfMessage" rows="5"></textarea>
+          <small class="field-error" id="cfMessageError"></small>
+        </label>
+        <button type="submit" class="btn primary">Send message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Cruz, John Robert DG. Built with HTML, CSS and JavaScript.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">&uarr;</button>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" data-close aria-label="Close">&times;</button>
+      <p class="project-kicker" id="modalKicker"></p>
+      <h3 id="modalTitle"></h3>
+      <p class="modal-desc" id="modalDesc"></p>
+      <ul class="modal-points" id="modalPoints"></ul>
+      <div class="tags" id="modalTags"></div>
+      <div class="hero-buttons" id="modalLinks"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
